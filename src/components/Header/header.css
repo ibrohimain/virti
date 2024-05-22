@@ -1,0 +1,56 @@
+.logo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .dropdownContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chevronIcon {
+    display: inline-block;
+    transition: transform 0.5s;
+  }
+  
+  .dropdownContainer:hover .chevronIcon {
+    transform: rotate(180deg);
+  }
+  
+  .dropdownMenu,
+  .dropdownMenuAlt {
+    position: absolute;
+    top: 115%;
+    left: 0;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    /* border-left: 1px solid #434345; */
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .dropdownMenu.open,
+  .dropdownMenuAlt.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .dropdownMenu.closed,
+  .dropdownMenuAlt.closed {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  #modalList{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+    gap: 10px;
+  }
